@@ -28,6 +28,11 @@ h2 {
     padding-bottom: 10px;
     font-size: 2rem;
 }
+h3{
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #b89a7c;
+}
 
 p {
     font-size: 18px;
@@ -48,13 +53,6 @@ a{
     justify-content: center;
     align-items: center;
     overflow: hidden;
-}
-.top .ribon1{
-    position: absolute;
-    width: 1000px;
-    transform: rotate(-45deg);
-    bottom: -300px;
-    right: -300px;
 }
 
 .container {
@@ -87,3 +85,6 @@ a+p{
 }
 
 
+#visitCounter{
+    text-align: center;
+}
