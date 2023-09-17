@@ -3,11 +3,12 @@
 
 # 以下開発者向け
 
-## ブランチの話
+### ブランチの話
 以下のブランチ構成で進めます
 - main : 公開用（ここのソースコードがホームページになります）
 - dev  : 開発用
 
+## githubに関して
 ### セットアップ
 ```cmd
 git clone https://github.com/OUojousamaclub/homepage.git
@@ -23,9 +24,37 @@ git commit -m "作業内容とかお気持ちとか"
 git push origin dev
 ```
 
-### 公開できる状態になったら
-担当者に連絡してマージしてもらってください。
+## 公開！
+Firebase Hostiing へのホスト
+### セットアップ
+```
+npm install -g firebase-tools
+firebase login
+```
 
+
+### 内部公開 
+```
+git branch
+```
+```
+* dev
+  main
+```
+ってなってることを確認して
+```
+firebase hosting:channel:deploy preview_name
+```
+
+### 最終公開
+```
+  dev
+* main
+```
+ってなってることを確認して
+```
+firebase deploy
+```
 
 
 ## あると便利なツール集
