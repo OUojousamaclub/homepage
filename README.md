@@ -45,9 +45,10 @@ git branch
 ```
 firebase hosting:channel:deploy preview_name
 ```
+もしくは、github上でPRを出す
 
 ### 最終公開
-mainブランチにmergeすると自動的にデプロイされる。
+mainブランチにmergeでhttps://ou-ojousamaclub.com/に公開
 
 
 ## あると便利なツール集
