@@ -47,14 +47,7 @@ firebase hosting:channel:deploy preview_name
 ```
 
 ### 最終公開
-```
-  dev
-* main
-```
-ってなってることを確認して
-```
-firebase deploy
-```
+mainブランチにmergeすると自動的にデプロイされる。
 
 
 ## あると便利なツール集
