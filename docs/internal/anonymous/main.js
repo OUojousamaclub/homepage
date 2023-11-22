@@ -6,9 +6,7 @@ submit.addEventListener('click', function() {
         url="https://discord.com/api/webhooks/1176879950586974308/8mH-13iYOjgY0PpaHEIi2sfKp21fm9FSRrukyl-O-m2EwvDKhb6DcsW_QGL1S5Cb7Nc1"
     }
     else if(serverSelect.value=="運営"){
-        window.alert("この鯖はまだ使えないらしいですわ。城主に「ウェブフックはまだですか」と頼みに行きましょう。")
-        return
-        url=""
+        url="https://discord.com/api/webhooks/1176899917495664742/zjbiVmNUeGTQp7QqVATTyRBR-XqQfxNeY3gpcYDFGywhpp4OADiO2VmXLykt4eYQX6mE"
     }else{
         window.alert("バグですわ！急いで門番を呼んできなさい！")
         return
