@@ -69,6 +69,7 @@ a+p{
     border-radius: 4px;
     margin-top: 20px;
     transition: background 0.3s;
+    cursor: pointer;
 }
 
 .btn:hover {
@@ -78,4 +79,22 @@ a+p{
 
 #visitCounter{
     text-align: center;
+}
+
+textarea {
+    width: 100%; /* レスポンシブな幅 */
+    background: #1b1b1b; /* 背景色 */
+    color: #b89a7c; /* 文字色 */
+    border: 2px solid #b89a7c; /* 境界線のスタイル */
+    padding: 10px; /* 内側の余白 */
+    font-family: 'Noto Sans JP', sans-serif; /* フォントファミリー */
+    font-size: 18px; /* フォントサイズ */
+    margin-top: 20px; /* 上の余白 */
+    border-radius: 4px; /* 境界線の角丸 */
+    line-height: 1.6; /* 行の高さ */
+}
+
+textarea:focus {
+    outline: none; /* フォーカス時のアウトラインを削除 */
+    border-color: #a2876a; /* フォーカス時の境界線の色 */
 }
