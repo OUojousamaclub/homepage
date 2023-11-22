@@ -19,23 +19,28 @@ submit.addEventListener('click', function() {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-            username: nameInput.value,
-            content: msgTextarea.value
+            username: nameInput.value || '匿名',
+            content: msgTextarea.value || '-'
         })
     })
     .then(res => {
         console.log(res);
         msgTextarea.value = '';
         result.innerText = '無事に送信されましたわ！';
+    }).catch(err => {
+        console.error(err);
+        result.innerText = 'エラーが発生しましたわ...';
     });
 })
 
 
 randomBtn.addEventListener('click', function() {
-    const randomNames=["才能あふれるお嬢様","寡黙な執事","冷静沈着な執事","おてんばメイド","謎めいた館主","陽気な庭師","書物好きな司書","忠実な従者",
-    "勤勉な家政婦","物静かな画家","秘密を抱える使用人","孤高の音楽家","気まぐれな芸術家","怪しい占い師","冷酷な刺客",
-    "優雅な舞踏教師","情熱的なオペラ歌手","才能溢れる若き芸術家","庭園に昔からある銅像","館の主の愛犬"];
-    nameInput.value=randomNames[Math.floor(Math.random() * randomNames.length)];
+    const randomAttrs=["才能あふれる","寡黙な","冷静沈着な","おてんば","謎めいた","陽気な","物好きな","忠実な",
+    "勤勉な","物静かな","秘密を抱える","孤高の","気まぐれな","怪しい","冷酷な","優雅な","情熱的な","才能溢れる","テンションの高い"];
+    const randomRoles=["お嬢様","執事","執事","メイド","館主","庭師","司書","従者","家政婦","画家","使用人","音楽家",
+    "芸術家","占い師","刺客","舞踏教師","オペラ歌手","芸術家","主の犬"];
+
+    nameInput.value=randomAttrs[Math.floor(Math.random() * randomAttrs.length)]+randomRoles[Math.floor(Math.random() * randomRoles.length)];
 });
 
 nameInput.addEventListener('change', function() {
