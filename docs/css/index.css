@@ -12,3 +12,6 @@
     background-blend-mode:darken;
     background-position: center;
 }
+.container >div{
+    margin-bottom: 50px;
+}
