@@ -10,17 +10,18 @@ body {
 }
 
 header {
-    position:fixed;
+    position: fixed;
     width: 100%;
     /* background: #2c2c2c; */
     padding: 20px 0;
     text-align: center;
 }
 
-h1{
+h1 {
     margin: 0;
     color: #b89a7c;
     font-size: 2rem;
+
     @media (min-width: 800px) {
         font-size: 3rem;
     }
@@ -31,7 +32,8 @@ h2 {
     padding-bottom: 10px;
     font-size: 2rem;
 }
-h3{
+
+h3 {
     font-size: 1.5rem;
     margin-bottom: 10px;
     color: #b89a7c;
@@ -41,9 +43,10 @@ p {
     font-size: 18px;
     margin-top: 20px;
 }
-a{
+
+a {
     font-size: 18px;
-    color:#b89a7c ;
+    color: #b89a7c;
 }
 
 .container {
@@ -51,11 +54,9 @@ a{
     margin: 0 auto;
     padding: 20px;
 }
-.container >div{
-    margin-bottom: 50px;
-}
-a+p{
-    margin-top:0 ;
+
+a+p {
+    margin-top: 0;
 }
 
 
@@ -77,24 +78,112 @@ a+p{
 }
 
 
-#visitCounter{
+#visitCounter {
     text-align: center;
 }
 
 textarea {
-    width: 100%; /* レスポンシブな幅 */
-    background: #1b1b1b; /* 背景色 */
-    color: #b89a7c; /* 文字色 */
-    border: 2px solid #b89a7c; /* 境界線のスタイル */
-    padding: 10px; /* 内側の余白 */
-    font-family: 'Noto Sans JP', sans-serif; /* フォントファミリー */
-    font-size: 18px; /* フォントサイズ */
-    margin-top: 20px; /* 上の余白 */
-    border-radius: 4px; /* 境界線の角丸 */
-    line-height: 1.6; /* 行の高さ */
+    width: 100%;
+    /* レスポンシブな幅 */
+    background: #1b1b1b;
+    /* 背景色 */
+    color: #b89a7c;
+    /* 文字色 */
+    border: 2px solid #b89a7c;
+    /* 境界線のスタイル */
+    padding: 10px;
+    /* 内側の余白 */
+    font-family: 'Noto Sans JP', sans-serif;
+    /* フォントファミリー */
+    font-size: 18px;
+    /* フォントサイズ */
+    margin-top: 20px;
+    /* 上の余白 */
+    border-radius: 4px;
+    /* 境界線の角丸 */
+    line-height: 1.6;
+    /* 行の高さ */
 }
 
 textarea:focus {
-    outline: none; /* フォーカス時のアウトラインを削除 */
-    border-color: #a2876a; /* フォーカス時の境界線の色 */
+    outline: none;
+    /* フォーカス時のアウトラインを削除 */
+    border-color: #a2876a;
+    /* フォーカス時の境界線の色 */
+}
+
+select {
+    width: 100%;
+    /* レスポンシブな幅 */
+    background: #1b1b1b;
+    /* 背景色 */
+    color: #b89a7c;
+    /* 文字色 */
+    border: 2px solid #b89a7c;
+    /* 境界線のスタイル */
+    padding: 10px;
+    /* 内側の余白 */
+    font-family: 'Noto Sans JP', sans-serif;
+    /* フォントファミリー */
+    font-size: 18px;
+    /* フォントサイズ */
+    margin-top: 20px;
+    /* 上の余白 */
+    border-radius: 4px;
+    /* 境界線の角丸 */
+    line-height: 1.6;
+    /* 行の高さ */
+    appearance: none;
+    /* デフォルトのselectスタイルを無効にする */
+    cursor: pointer;
+    /* カーソルスタイル */
+}
+
+select:focus {
+    outline: none;
+    /* フォーカス時のアウトラインを削除 */
+    border-color: #a2876a;
+    /* フォーカス時の境界線の色 */
+}
+
+option {
+    background: #1b1b1b;
+    /* 背景色 */
+    color: #b89a7c;
+    /* 文字色 */
+}
+
+
+input {
+    width: 100%;
+    /* レスポンシブな幅 */
+    background: #1b1b1b;
+    /* 背景色 */
+    color: #b89a7c;
+    /* 文字色 */
+    border: 2px solid #b89a7c;
+    /* 境界線のスタイル */
+    padding: 10px;
+    /* 内側の余白 */
+    font-family: 'Noto Sans JP', sans-serif;
+    /* フォントファミリー */
+    font-size: 18px;
+    /* フォントサイズ */
+    margin-top: 20px;
+    /* 上の余白 */
+    border-radius: 4px;
+    /* 境界線の角丸 */
+    line-height: 1.6;
+    /* 行の高さ */
+    box-sizing: border-box;
+    /* 枠線を含めたサイズで計算 */
+    transition: border-color 0.3s;
+    /* 境界線の色の変化を滑らかに */
+}
+
+input:focus {
+    outline: none;
+    /* フォーカス時のアウトラインを削除 */
+    border-color: #a2876a;
+    /* フォーカス時の境界線の色 */
 }
