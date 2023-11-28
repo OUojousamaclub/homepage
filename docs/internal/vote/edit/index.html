@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>匿名投票 - 編集</title>
+
+</head>
+
+<body>
+    <form action="submit_vote.php" method="post">
+        <label for="question">質問:</label><br>
+        <input type="text" id="question" name="question"><br><br>
+
+        <label>選択肢:</label><br>
+        <div id="optionsContainer">
+            <div>
+                <input type="text" name="options[]" placeholder="選択肢 1">
+                <button type="button" onclick="removeOption(this)">削除</button>
+            </div>
+            <div>
+                <input type="text" name="options[]" placeholder="選択肢 2">
+                <button type="button" onclick="removeOption(this)">削除</button>
+            </div>
+        </div>
+        <button type="button" onclick="addOption()">選択肢を追加</button><br><br>
+
+        <input type="submit" value="投票を作成">
+    </form>
+
+    <script>
+        function addOption() {
+            var optionsContainer = document.getElementById('optionsContainer');
+            var optionDiv = document.createElement('div');
+            var newOption = document.createElement('input');
+            newOption.setAttribute('type', 'text');
+            newOption.setAttribute('name', 'options[]');
+            newOption.setAttribute('placeholder', '新しい選択肢');
+            var deleteButton = document.createElement('button');
+            deleteButton.innerText = '削除';
+            deleteButton.setAttribute('type', 'button');
+            deleteButton.setAttribute('onclick', 'removeOption(this)');
+
+            optionDiv.appendChild(newOption);
+            optionDiv.appendChild(deleteButton);
+            optionsContainer.appendChild(optionDiv);
+        }
+
+        function removeOption(btn) {
+            var optionDiv = btn.parentNode;
+            optionDiv.parentNode.removeChild(optionDiv);
+        }
+    </script>
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="../../../js/firebase.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
