@@ -1,3 +1,50 @@
+
+// function getQueryParams() {
+//     const queryParams = new URLSearchParams(window.location.search);
+//     const params = {};
+//     for (const [key, value] of queryParams.entries()) {
+//         params[key] = value;
+//     }
+//     return params;
+// }
+
+// const queryParams = getQueryParams();
+// console.log(queryParams);
+
+// let channelDict={}
+// if (queryParams.mode=="operation"){
+//     channelLst=[
+//         {
+//             url:'https://discord.com/api/webhooks/1176899917495664742/zjbiVmNUeGTQp7QqVATTyRBR-XqQfxNeY3gpcYDFGywhpp4OADiO2VmXLykt4eYQX6mE',
+//             name:"運営/会議チャット",
+//             value:"運営1"
+//         },
+//         {
+//             url:'https://discord.com/api/webhooks/1177227694618988574/qj3GALEL-ndTpaQw1Nc2SIw_6w1AGBP5klODPBF7GC8Pv9hhnKe2bi4Ff9SbgZeOPS55',
+//             name:"運営/匿名投稿",
+//             value:"運営2"
+//         },
+//     ]
+// }
+// if(queryParams.mode=="test"){
+//     channelLst=[
+//         {
+//             url:'https://discord.com/api/webhooks/1176879950586974308/8mH-13iYOjgY0PpaHEIi2sfKp21fm9FSRrukyl-O-m2EwvDKhb6DcsW_QGL1S5Cb7Nc1',
+//             name:"テスト鯖",
+//             value:"テスト鯖"
+//         },
+//     ]
+// }
+// if(queryParams.mode=="sagyo"){
+//     channelLst=[
+//         {
+            
+//         },
+//     ]
+// }
+
+
+
 submit.addEventListener('click', function () {
     url = ""
     if (serverSelect.value == "作業部屋") {

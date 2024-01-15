@@ -29,7 +29,7 @@ let prefix=""
 let no_of_imgs=0
 if(window.innerHeight<window.innerWidth){
     prefix="h"
-    no_of_imgs=5
+    no_of_imgs=6
 }
 else{
     prefix="v"
