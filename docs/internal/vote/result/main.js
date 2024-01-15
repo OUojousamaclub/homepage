@@ -1,10 +1,6 @@
 db.collection("vote").doc("answer")
     .onSnapshot((doc) => {
-        console.log("Current data: ", doc.data());
-
-
         document.getElementById("result_div").innerHTML = ""
-
         dic={}
         for (key in doc.data()) {
             val=doc.data()[key]
