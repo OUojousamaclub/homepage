@@ -41,4 +41,5 @@ update_btn.addEventListener('click',function(){
         this.innerText="更新する"
         window.alert("エラーが発生しました！")
     })
+    db.collection("vote").doc("answer").update(dic)
 })
