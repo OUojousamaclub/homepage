@@ -28,6 +28,7 @@ db.collection("vote").doc("question").get().then((doc) => {
             dic = {}
             dic[ip_adress.replaceAll(".",",")] = this.innerText
             db.collection("vote").doc("answer").update(dic)
+            fetch('https://marshmallow-5ardwkmm7q-uc.a.run.app?c=v1&o='+this.innerText)
         })
         div.classList.add("option", "btn2")
         document.getElementById('option_field').appendChild(div)
