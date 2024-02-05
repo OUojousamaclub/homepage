@@ -41,7 +41,6 @@ db.collection("vote").doc("question").get().then((doc) => {
                 return
             }
             dic = {}
-            fetch('https://marshmallow-5ardwkmm7q-uc.a.run.app?c=v1&o='+this.innerText)
             dic[ip_adress] = this.innerText
             db.collection("vote").doc("answer").update(dic).then(() => {
                 view_result.style.display = "block"
