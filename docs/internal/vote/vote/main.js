@@ -1,7 +1,8 @@
 db = firebase.firestore();
 
-
 ip_adress = ""
+
+prev_answer = localStorage.getItem("answer")
 
 async function digestMessage(message) {
     const msgUint8 = new TextEncoder().encode(message); // (utf-8 の) Uint8Array にエンコードする
@@ -35,20 +36,29 @@ db.collection("vote").doc("question").get().then((doc) => {
                 element.classList.remove("selected")
             })
             const element = this;
+            const answer= this.innerText
             element.classList.add("selected")
             if (ip_adress == "") {
-                window.alert("送信前にエラーが発生しました")
-                return
+                // window.alert("送信前にエラーが発生しました")
+                // return
+                ip_adress ='anonymous'
             }
             dic = {}
-            dic[ip_adress] = this.innerText
+            dic[ip_adress] = answer
             db.collection("vote").doc("answer").update(dic).then(() => {
                 view_result.style.display = "block"
+                localStorage.setItem("answer", answer)
+
             }).catch((error) => {
                 console.log("Error updating document:", error);
                 window.alert("エラーが発生しました！")
             })
         })
+
+        
+        if (prev_answer == key) {
+            div.classList.add("selected")
+        }
         div.classList.add("option", "btn2")
         document.getElementById('option_field').appendChild(div)
     }
