@@ -1,0 +1,12 @@
+Recv: id=0 data=0x00000000 : Fail
+Send: id=100 data=0x00000049
+MP.Send error = -11
+MP.Recv error = -116
+Recv: id=0 data=0x00000000 : Fail
+Send: id=100 data=0x0000003f
+MP.Send error = -11
+MP.Recv error = -116
+Recv: id=0 data=0x00000000 : Fail
+Send: id=100 data=0x00000058
+MP.Send error = -11
+MP.Recv error = -116
