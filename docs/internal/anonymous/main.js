@@ -38,11 +38,16 @@
 // if(queryParams.mode=="sagyo"){
 //     channelLst=[
 //         {
-            
+
 //         },
 //     ]
 // }
 
+
+icon_path=''
+secret_btn.addEventListener('click',()=>{
+    icon_path=prompt('画像のパスを入力')
+})
 
 
 submit.addEventListener('click', function () {
@@ -67,10 +72,14 @@ submit.addEventListener('click', function () {
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({
+        body: !icon_path ? (JSON.stringify({
             username: nameInput.value || '匿名',
             content: msgTextarea.value || '-'
-        })
+        })) : (JSON.stringify({
+            username: nameInput.value || '匿名',
+            content: msgTextarea.value || '-',
+            avatar_url: "https://raw.githubusercontent.com/OUojousamaclub/homepage/main/docs/internal/anonymous/img/"+icon_path,
+        }))
     })
         .then(res => {
             console.log(res);
