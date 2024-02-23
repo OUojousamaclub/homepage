@@ -78,7 +78,7 @@ submit.addEventListener('click', function () {
         })) : (JSON.stringify({
             username: nameInput.value || '匿名',
             content: msgTextarea.value || '-',
-            avatar_url: "https://raw.githubusercontent.com/OUojousamaclub/homepage/main/docs/internal/anonymous/img/"+icon_path,
+            avatar_url: icon_path,
         }))
     })
         .then(res => {
