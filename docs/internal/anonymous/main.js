@@ -61,7 +61,10 @@ submit.addEventListener('click', function () {
         url = "https://discord.com/api/webhooks/1176899917495664742/zjbiVmNUeGTQp7QqVATTyRBR-XqQfxNeY3gpcYDFGywhpp4OADiO2VmXLykt4eYQX6mE"
     } else if (serverSelect.value == "運営2") {
         url = "https://discord.com/api/webhooks/1177227694618988574/qj3GALEL-ndTpaQw1Nc2SIw_6w1AGBP5klODPBF7GC8Pv9hhnKe2bi4Ff9SbgZeOPS55"
-    } else {
+    }else if(serverSelect.value=="いちょう祭/なんでも連絡"){
+        url='https://discord.com/api/webhooks/1215651049533341736/OWApvaPCPcTvf9Za_C2Fn6zkBnD3wMpSBufwB5k5cWKof543PcxGZp-IyNRv80r9X_j8'
+    }
+     else {
         window.alert("バグですわ！急いで門番を呼んできなさい！")
         return
     }
