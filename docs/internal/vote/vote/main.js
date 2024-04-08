@@ -1,8 +1,20 @@
+queryParams={}
+location.search.substr(1).split("&").forEach((element)=>{
+    let pair=element.split("=")
+    queryParams[pair[0]]=pair[1]
+})
+const id=queryParams["id"]
+if(!id){
+    location.href="../"
+}
+document.getElementById('to_result_link').href = `../result/?id=${id}`
+
+
 db = firebase.firestore();
 
 ip_adress = ""
 
-prev_answer = localStorage.getItem("answer")
+prev_answer = localStorage.getItem("answer-"+id)
 
 async function digestMessage(message) {
     const msgUint8 = new TextEncoder().encode(message); // (utf-8 の) Uint8Array にエンコードする
@@ -26,7 +38,7 @@ fetch("https://ipinfo.io/json").then((response) => {
     console.log("Error getting ip:", error);
 });
 
-db.collection("vote").doc("question").get().then((doc) => {
+db.collection("vote-q").doc(id).get().then((doc) => {
     document.getElementById("title").innerText = doc.data()["title"]
     for (key of doc.data()["options"]) {
         div = document.createElement("div")
@@ -45,9 +57,9 @@ db.collection("vote").doc("question").get().then((doc) => {
             }
             dic = {}
             dic[ip_adress] = answer
-            db.collection("vote").doc("answer").update(dic).then(() => {
+            db.collection("vote-a").doc(id).update(dic).then(() => {
                 view_result.style.display = "block"
-                localStorage.setItem("answer", answer)
+                localStorage.setItem("answer-"+id, answer)
 
             }).catch((error) => {
                 console.log("Error updating document:", error);

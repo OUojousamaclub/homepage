@@ -1,5 +1,15 @@
+queryParams={}
+location.search.substr(1).split("&").forEach((element)=>{
+    let pair=element.split("=")
+    queryParams[pair[0]]=pair[1]
+})
+const id=queryParams["id"]
+if(!id){
+    location.href="../"
+}
+
 const keys=[]
-db.collection('vote').doc('question').get().then((doc) => {
+db.collection('vote-q').doc(id).get().then((doc) => {
     document.getElementById("title").innerText = doc.data()["title"]
     for (key of doc.data()["options"]) {
         keys.push(key)
@@ -8,7 +18,7 @@ db.collection('vote').doc('question').get().then((doc) => {
 })
 
 F=(keys)=>{
-    db.collection("vote").doc("answer")
+    db.collection("vote-a").doc(id)
         .onSnapshot((doc) => {
             document.getElementById("result_div").innerHTML = ""
             dic={}

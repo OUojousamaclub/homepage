@@ -1,3 +1,15 @@
+queryParams={}
+location.search.substr(1).split("&").forEach((element)=>{
+    let pair=element.split("=")
+    queryParams[pair[0]]=pair[1]
+})
+const id=queryParams["id"]
+if(!id){
+    location.href="../"
+}
+
+document.getElementById('to_vote_link').href = `../vote/?id=${id}`
+
 function addOption() {
     var optionsContainer = document.getElementById('optionsContainer');
     var optionDiv = document.createElement('div');
@@ -27,6 +39,7 @@ update_btn.addEventListener('click',function(){
     title=document.getElementById("question_title").value;
     dic["title"]=title
     dic["options"]=[]
+    dic["timestamp"]=firebase.firestore.FieldValue.serverTimestamp()
     Array.from(document.getElementsByClassName("option")).forEach((element, index) => {
         if(element.value!=""){
             dic["options"].push(element.value)
@@ -34,12 +47,12 @@ update_btn.addEventListener('click',function(){
     })
     
     db=firebase.firestore();
-    db.collection("vote").doc("question").set(dic).then(()=>{
+    db.collection("vote-q").doc(id).set(dic).then(()=>{
         this.innerText="更新する"
         document.getElementById("msg").innerText="成功"
     }).catch((error)=>{
         this.innerText="更新する"
         window.alert("エラーが発生しました！")
     })
-    db.collection("vote").doc("answer").update(dic)
+    db.collection("vote-a").doc(id).set({})
 })
