@@ -55,4 +55,5 @@ update_btn.addEventListener('click',function(){
         window.alert("エラーが発生しました！")
     })
     db.collection("vote-a").doc(id).set({})
+    db.collection("vote-c").doc(id).set({})
 })

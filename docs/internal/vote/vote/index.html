@@ -17,21 +17,42 @@
         #view_result{
             display: none;
         }
+        #comment_input{
+            width: 70%;
+        }
+        #comment_btn{
+            width: 10%;
+            height: 30px;
+        }
+        #comment_field > div{
+            margin: 10px 0;
+        }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <h2>匿名投票</h2>
-        <p>投票は上書きされます。</p>
+        <a href="../" style=" text-decoration: none;">
+            <h2>匿名投票</h2>
+        </a>
+        <p>複数投票を行った場合、最後のものが反映されます。</p>
         <h3 id="title"></h3>
         <div id="option_field"></div>
         <br>
         <div id="view_result">
             <a id="to_result_link">結果を見る</a>
         </div>
+        <div class="divider"></div>
+        <div id="comment_field">
+
+        </div>
+        <div>
+            <input type="text" id="comment_input" placeholder="匿名でコメントを残す">
+            <div id="comment_btn" class="btn">送信</div>
+        </div>
     </div>
 
+    
     
 
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
