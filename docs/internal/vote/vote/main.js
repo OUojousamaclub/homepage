@@ -79,3 +79,22 @@ db.collection("vote-q").doc(id).get().then((doc) => {
     window.alert("エラーが発生しました！")
 });
 
+
+db.collection('vote-c').doc(id).onSnapshot((doc) => {
+    document.getElementById('comment_field').innerHTML = ""
+    Array.from(doc.data()["comments"]).forEach((element) => {
+        div = document.createElement("div")
+        div.innerText = element
+        document.getElementById('comment_field').appendChild(div)
+    })
+})
+comment_btn.addEventListener("click", function () {
+    db.collection('vote-c').doc(id).update({
+        comments:firebase.firestore.FieldValue.arrayUnion(comment_input.value)
+    }).then(() => {
+        comment_input.value = ""
+    }).catch((error) => {
+        console.log("Error updating document:", error);
+        window.alert("エラーが発生しました！")
+    })
+})
