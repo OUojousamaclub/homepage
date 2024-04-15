@@ -71,7 +71,7 @@ db.collection("vote-q").doc(id).get().then((doc) => {
                 'time': firebase.firestore.FieldValue.serverTimestamp(),
                 'ip': ip_adress,
                 'id': id,
-                'option': key
+                'option': answer
             }).then(() => {
                 console.log("log added")
             }).catch((error) => {
