@@ -65,11 +65,25 @@ db.collection("vote-q").doc(id).get().then((doc) => {
                 console.log("Error updating document:", error);
                 window.alert("エラーが発生しました！")
             })
+
         })
+
+        db.collection('log').add({
+            'kind':'vote',
+            'time': firebase.firestore.FieldValue.serverTimestamp(),
+            'ip': ip_adress,
+            'id': id,
+            'option': key
+        }).then(() => {
+            console.log("log added")
+        }).catch((error) => {
+            console.log("Error adding log:", error);
+        });
 
         
         if (prev_answer == key) {
             div.classList.add("selected")
+            view_result.style.display = "block"
         }
         div.classList.add("option", "btn2")
         document.getElementById('option_field').appendChild(div)
