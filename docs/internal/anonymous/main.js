@@ -55,11 +55,11 @@ submit.addEventListener('click', function () {
     if (serverSelect.value == "作業部屋") {
         url = 'https://discord.com/api/webhooks/1176884868022538292/ySowWiTPAznwI0M8OnjFVEyScB19gNPqEV4hVjYqUVvFseyWF3ZiPCQXXpxa2LVMc83B'
     } else if (serverSelect.value == "テスト鯖") {
-        //url = "https://discord.com/api/webhooks/1176879950586974308/8mH-13iYOjgY0PpaHEIi2sfKp21fm9FSRrukyl-O-m2EwvDKhb6DcsW_QGL1S5Cb7Nc1"
-        url="https://discordapp.com/api/webhooks/1232320149206339746/6wNv9J9rGIUef8mdfXrQSu0NOcMj2pwwR32D1O0C_MeNG-4hCqNXBOBmo5jHT11zcJqe"
+        url = "https://discord.com/api/webhooks/1176879950586974308/8mH-13iYOjgY0PpaHEIi2sfKp21fm9FSRrukyl-O-m2EwvDKhb6DcsW_QGL1S5Cb7Nc1"
     }
     else if (serverSelect.value == "運営1") {
-        url = "https://discord.com/api/webhooks/1176899917495664742/zjbiVmNUeGTQp7QqVATTyRBR-XqQfxNeY3gpcYDFGywhpp4OADiO2VmXLykt4eYQX6mE"
+        //url = "https://discord.com/api/webhooks/1176899917495664742/zjbiVmNUeGTQp7QqVATTyRBR-XqQfxNeY3gpcYDFGywhpp4OADiO2VmXLykt4eYQX6mE"
+        url="https://discordapp.com/api/webhooks/1232320149206339746/6wNv9J9rGIUef8mdfXrQSu0NOcMj2pwwR32D1O0C_MeNG-4hCqNXBOBmo5jHT11zcJqe"
     } else if (serverSelect.value == "運営2") {
         url = "https://discord.com/api/webhooks/1177227694618988574/qj3GALEL-ndTpaQw1Nc2SIw_6w1AGBP5klODPBF7GC8Pv9hhnKe2bi4Ff9SbgZeOPS55"
     }else if(serverSelect.value=="いちょう祭/なんでも連絡"){
