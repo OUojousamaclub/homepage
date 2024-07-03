@@ -21,6 +21,7 @@ db=firebase.firestore();
 id2url={}
 db.collection("webhook").get().then((querySnapshot) => {
     querySnapshot.forEach((doc) => {
+        console.log(doc.id)
         console.log(doc.data())
         id2url[doc.id]=doc.data().url
 
