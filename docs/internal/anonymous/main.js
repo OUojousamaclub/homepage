@@ -1,48 +1,15 @@
 
-// function getQueryParams() {
-//     const queryParams = new URLSearchParams(window.location.search);
-//     const params = {};
-//     for (const [key, value] of queryParams.entries()) {
-//         params[key] = value;
-//     }
-//     return params;
-// }
+function getQueryParams() {
+    const queryParams = new URLSearchParams(window.location.search);
+    const params = {};
+    for (const [key, value] of queryParams.entries()) {
+        params[key] = value;
+    }
+    return params;
+}
 
-// const queryParams = getQueryParams();
-// console.log(queryParams);
-
-// let channelDict={}
-// if (queryParams.mode=="operation"){
-//     channelLst=[
-//         {
-//             url:'https://discord.com/api/webhooks/1176899917495664742/zjbiVmNUeGTQp7QqVATTyRBR-XqQfxNeY3gpcYDFGywhpp4OADiO2VmXLykt4eYQX6mE',
-//             name:"運営/会議チャット",
-//             value:"運営1"
-//         },
-//         {
-//             url:'https://discord.com/api/webhooks/1177227694618988574/qj3GALEL-ndTpaQw1Nc2SIw_6w1AGBP5klODPBF7GC8Pv9hhnKe2bi4Ff9SbgZeOPS55',
-//             name:"運営/匿名投稿",
-//             value:"運営2"
-//         },
-//     ]
-// }
-// if(queryParams.mode=="test"){
-//     channelLst=[
-//         {
-//             url:'https://discord.com/api/webhooks/1176879950586974308/8mH-13iYOjgY0PpaHEIi2sfKp21fm9FSRrukyl-O-m2EwvDKhb6DcsW_QGL1S5Cb7Nc1',
-//             name:"テスト鯖",
-//             value:"テスト鯖"
-//         },
-//     ]
-// }
-// if(queryParams.mode=="sagyo"){
-//     channelLst=[
-//         {
-
-//         },
-//     ]
-// }
-
+const queryParams = getQueryParams();
+console.log(queryParams);
 
 icon_path=''
 secret_btn.addEventListener('click',()=>{
@@ -50,26 +17,31 @@ secret_btn.addEventListener('click',()=>{
 })
 
 
+db=firebase.firestore();
+id2url={}
+db.collection("webhook").get().then((querySnapshot) => {
+    querySnapshot.forEach((doc) => {
+        console.log(doc.data())
+        id2url[doc.id]=doc.data().url
+
+        option=document.createElement('option')
+        option.value=doc.id
+        option.innerText=doc.data().name
+        serverSelect.appendChild(option)
+    });
+    if(queryParams.server){
+        serverSelect.value=queryParams.server
+    }
+});
+
 submit.addEventListener('click', function () {
-    url = ""
-    if (serverSelect.value == "作業部屋") {
-        url = 'https://discord.com/api/webhooks/1176884868022538292/ySowWiTPAznwI0M8OnjFVEyScB19gNPqEV4hVjYqUVvFseyWF3ZiPCQXXpxa2LVMc83B'
-    } else if (serverSelect.value == "テスト鯖") {
-        url = "https://discord.com/api/webhooks/1176879950586974308/8mH-13iYOjgY0PpaHEIi2sfKp21fm9FSRrukyl-O-m2EwvDKhb6DcsW_QGL1S5Cb7Nc1"
-    }
-    else if (serverSelect.value == "運営1") {
-        url = "https://discord.com/api/webhooks/1176899917495664742/zjbiVmNUeGTQp7QqVATTyRBR-XqQfxNeY3gpcYDFGywhpp4OADiO2VmXLykt4eYQX6mE"
-    } else if (serverSelect.value == "運営2") {
-        url = "https://discord.com/api/webhooks/1177227694618988574/qj3GALEL-ndTpaQw1Nc2SIw_6w1AGBP5klODPBF7GC8Pv9hhnKe2bi4Ff9SbgZeOPS55"
-    }else if(serverSelect.value=="いちょう祭/なんでも連絡"){
-        url='https://discord.com/api/webhooks/1215651049533341736/OWApvaPCPcTvf9Za_C2Fn6zkBnD3wMpSBufwB5k5cWKof543PcxGZp-IyNRv80r9X_j8'
-    }
-     else {
-        window.alert("バグですわ！急いで門番を呼んできなさい！")
+    url = id2url[serverSelect.value]
+    if(!url){
+        alert('サーバーを選択してくださいませ！')
         return
     }
 
-    result.innerText = '執事が郵便局まで車を走らせていますわ...';
+    result.innerText = '執事が郵便局まで馬車を走らせていますわ...';
     fetch(url, {
         method: 'POST',
         headers: {
