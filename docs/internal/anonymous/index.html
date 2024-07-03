@@ -22,11 +22,7 @@
         <p>管理者含め、誰が投稿したかを確認することはできません。</p>
 
         <select id="serverSelect">
-            <option value="運営2">運営/会議チャット</option>
-            <option value="運営1">運営/匿名投稿</option>
-            <option value="作業部屋">作業部屋/部内twitter</option>
-            <option value="いちょう祭/なんでも連絡">いちょう祭/なんでも連絡</option>
-            <option value="テスト鯖">テスト鯖（デバッグ用 / 未底の個人サーバーにつながります）</option>
+            <option value="0">サーバーを選択</option>
         </select>
         <textarea id="msgTextarea" name="content" id="content" rows="10" placeholder="投稿内容"></textarea><br>
         <input id="nameInput" type="text" placeholder="ハンドルネーム（例：寡黙な執事）" />
@@ -36,6 +32,10 @@
 
         <button id="secret_btn" style="display: none;">secret</button>
     </div>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="../../js/firebase.js"></script>
     <script src="main.js"></script>
 </body>
 
