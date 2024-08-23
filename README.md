@@ -48,7 +48,7 @@ firebase hosting:channel:deploy preview_name
 もしくは、github上でPRを出す
 
 ### 最終公開
-mainブランチにmergeでhttps://ou-ojousamaclub.com/に公開
+mainブランチにmergeで https://ou-ojousamaclub.com/ に公開
 
 
 ## あると便利なツール集
