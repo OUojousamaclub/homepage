@@ -17,15 +17,9 @@
 }
 
 .twitter-wrap {
-  margin-left: auto;
-  margin-right: auto;
-  width: 80%;
-  max-width: 500px;
-
   display: flex;
   justify-content: center;
-}
-
-.twitter_wrap iframe {
-  width: 100% !important;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 500px;
 }
