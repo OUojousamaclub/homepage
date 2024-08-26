@@ -16,8 +16,13 @@
   margin-bottom: 50px;
 }
 
-.twitter-tl {
-  height: 90vh;
-  width: 90vw;
-  margin: 0 auto;
+.twitter-wrap {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  max-width: 500px;
+}
+
+.twitter_wrap iframe {
+  width: 100% !important;
 }
