@@ -25,7 +25,7 @@ git push origin dev
 ```
 
 ## 公開！
-Firebase Hostiing へのホスト
+Firebase Hosting へのホスト
 ### セットアップ
 ```
 npm install -g firebase-tools
