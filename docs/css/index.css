@@ -13,7 +13,12 @@
   background-position: center;
 }
 
+.container {
+  margin: 10%;
+}
+
 .container>div {
+  
   margin-bottom: 50px;
 }
 
@@ -35,7 +40,7 @@
 
 .text {
   display: block;
-  text-align: center;
+  
   line-height: 200%;
   color: whitesmoke;
   font-size: 0.9rem;
@@ -100,4 +105,10 @@
   justify-content: center;
   width: 90%;
   max-width: 500px;
+}
+
+/*お問い合わせ*/
+.contact {
+  display: block;
+  margin: 5%;
 }
