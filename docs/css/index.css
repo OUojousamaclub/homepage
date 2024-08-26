@@ -19,6 +19,7 @@
 .twitter-wrap {
   display: flex;
   justify-content: center;
+  margin: 0 auto;
   width: 90%;
   max-width: 500px;
 }
