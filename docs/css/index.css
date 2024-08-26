@@ -1,17 +1,23 @@
-.top{
-    height: 100vh;
-    width: 100vw;
+.top {
+  height: 100vh;
+  width: 100vw;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    background-size: cover;
-    transition-duration: 0.5s;
-    background-color:rgba(0,0,0,0.6);
-    background-blend-mode:darken;
-    background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-size: cover;
+  transition-duration: 0.5s;
+  background-color: rgba(0, 0, 0, 0.6);
+  background-blend-mode: darken;
+  background-position: center;
 }
-.container >div{
-    margin-bottom: 50px;
+.container > div {
+  margin-bottom: 50px;
+}
+
+.twitter-timeline {
+  height: 90vh;
+  width: 90vw;
+  margin: 0 auto;
 }
