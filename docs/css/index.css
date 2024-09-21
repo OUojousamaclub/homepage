@@ -34,15 +34,15 @@
   display: block;
   text-align: center;
   color: whitesmoke;
-  font-size: 0.5rem;
-  letter-spacing: 0.2rem;
+  font-size: 0.6rem;
+  letter-spacing: 0.25rem;
 }
 
 .text {
   
   line-height: 200%;
   color: whitesmoke;
-  font-size: 0.9rem;
+  font-size: 1.0rem;
   margin-top: 20px;
 }
 
@@ -153,7 +153,7 @@
 }
 
 .news_list .title {
-  font-size: 0.9rem;
+  font-size: 1.0rem;
   line-height: 2.0rem;
 }
 
