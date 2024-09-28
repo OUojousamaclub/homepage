@@ -129,7 +129,7 @@
 
 .news_list tr {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   padding: 1.0rem 0rem;
   border-bottom: 1px solid #f5f5f5;
   
@@ -157,6 +157,7 @@
   /*line-height:　rem;*/
   padding-right: 0.6rem;
   margin-right: 0.6rem;
+  ;
 
 }
 
@@ -172,7 +173,7 @@
 
 .news_list .title {
   font-size: 0.9rem;
-  line-height: 1.0rem;
+  line-height: 200%;
   
 }
 
