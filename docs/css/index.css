@@ -195,6 +195,14 @@
   vertical-align: middle;
 }
 
+.material-symbols-outlined.open_in_new {
+  display: inline-flex;
+  vertical-align: middle;
+  font-size: 0.5rem;
+  color: whitesmoke;
+  fill: whitesmoke;
+
+}
 
 
 
@@ -246,6 +254,64 @@ cursor: pointer;
   width: 90%;
   max-width: 500px;
 }
+
+/*活動内容*/
+.activity {
+
+  display: block;
+  margin-top: 12.5%;
+  margin-bottom: 5%;
+
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 750px;
+}
+
+
+.activity_head {
+  display: block;
+  width: auto;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.activity .text {
+
+  line-height: 200%;
+  color: whitesmoke;
+  font-size: 0.9rem;
+  margin-top: 20px;
+
+}
+
+.activity_main {
+  text-align: center;
+  color: whitesmoke;
+  font-size: 0.9rem;
+
+}
+
+.activity_list {
+  max-width: 600px;
+  display: inline-block;
+  text-align: left;
+}
+
+.activity_list dt {
+  font-size: 1.1rem;
+}
+
+.activity_list dd {
+  font-size: 0.9rem;
+}
+
+.activity_list dt::before {
+  content: '○';
+  color: #b17358;
+}
+
+
+
 
 /*お問い合わせ*/
 .contact {
