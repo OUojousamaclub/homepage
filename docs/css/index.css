@@ -123,6 +123,22 @@
   outline-offset: 4px;
 }
 
+.activities-summary .activity-list {
+  margin-top: 20px;
+}
+
+.activities-summary .activity-entry {
+  border-bottom: 0;
+}
+
+.activities-poster {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  margin: 24px auto;
+}
+
 .twitter-wrap {
   margin-top: 0.5rem;
   margin-left: auto;
