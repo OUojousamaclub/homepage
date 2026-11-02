@@ -1,0 +1,37 @@
+.activities-page {
+  max-width: 750px;
+  padding-top: 32px;
+  padding-bottom: 64px;
+}
+
+.activities-heading {
+  margin: 48px 0;
+  text-align: center;
+}
+
+.activities-caption {
+  margin: 0 0 8px;
+  font-size: 0.9rem;
+  letter-spacing: 0.1rem;
+}
+
+.activities-intro {
+  color: whitesmoke;
+  font-size: 0.9rem;
+  line-height: 2;
+}
+
+.activities-year + .activities-year {
+  margin-top: 48px;
+}
+
+.activities-year h2 {
+  margin-bottom: 0;
+  font-size: 1.5rem;
+}
+
+.activities-page a:focus-visible,
+footer a:focus-visible {
+  outline: 2px solid #b89a7c;
+  outline-offset: 4px;
+}

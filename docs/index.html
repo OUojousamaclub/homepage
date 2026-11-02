@@ -9,22 +9,34 @@
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/header.css" />
   <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/activity-entry.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Noto+Serif+JP&display=swap"
     rel="stylesheet" />
-  <link rel="icon" href="imgs/favicon.ico" />
-  <!-- symbols -->
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <link rel="icon" href="imgs/favicon.ico" />
   <meta name="description" content="大阪大学お嬢様部(非公認)の公式ホームページですわ！" />
   <meta name="keywords" content="大阪大学, お嬢様部, サークル, 大阪大学お嬢様部" />
+  <script src="js/navigation.js" defer></script>
 </head>
 
 <body>
-  <!-- <header>
-        <div id="hamburger" class="hamburger"><span></span><span></span><span></span></div>
-        <div class="menu"></div>
-    </header> -->
+  <header class="site-header">
+    <details class="site-menu">
+      <summary class="menu-toggle" aria-label="ナビゲーションメニュー">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </summary>
+      <nav class="site-navigation" aria-label="メインメニュー">
+        <ul>
+          <li><a href="index.html" aria-current="page">ホーム</a></li>
+          <li><a href="activities/index.html">過去の活動記録</a></li>
+        </ul>
+      </nav>
+    </details>
+  </header>
   <div class="top" id="top">
     <h1>大阪大学お嬢様部</h1>
   </div>
@@ -44,7 +56,7 @@
       <div class="text">
         大阪大学お嬢様部は、2020年に創設されたサークルです。<span>月に一度程度のお茶会をしながら交流する会合や、</span><span>文化祭などのイベントに出展することが主な活動です。</span><br />
         <p class="text">お嬢様 とは心の在り方。 出自も性別も年齢も一切関係なく、
-          高貴な心を持っていれば誰でも お嬢様 ですわ の理念のもと、高貴な心を磨いています。</span>
+          高貴な心を持っていれば誰でも お嬢様 ですわ の理念のもと、高貴な心を磨いています。
         </p>
 
       </div>
@@ -64,221 +76,42 @@
 
 
 
-    <!--
-    最新情報
-    -->
+    <!--活動記録-->
+    <section class="activities-summary" aria-labelledby="activities-heading">
+      <h2 class="activities-heading" id="activities-heading">
+        <span class="head_title">ACTIVITIES</span>
+        <span class="head_caption">活動案内</span>
+      </h2>
+      <ol class="activity-list" role="list">
+        <li class="activity-entry">
+          <time class="activity-date" datetime="2026-11-02" aria-label="掲載日：2026年11月2日">
+            <span class="activity-date-year">2026</span>
+            <span class="activity-date-day">11.1</span>
+            <span class="activity-date-day">~</span>
+            <span class="activity-date-day">11.3</span>
+          </time>
+          <div class="activity-body">
+            <span class="activity-notice">開催告知</span>
+            <p>まちかね祭に出展いたします！『お菓子とぜんまい仕掛けのお茶会』を開催いたしますわ。</p>
+            <p>
+              <span class="material-symbols-outlined inline" aria-hidden="true">location_on</span>&ensp;法経講義棟2階
+              4番教室<br />
+              <span class="material-symbols-outlined inline"
+                aria-hidden="true">schedule</span>&ensp;11:00〜18:20（最終日17:30）<br />
+              <span class="material-symbols-outlined inline" aria-hidden="true">payments</span>&ensp;100円<br />
+              <span class="material-symbols-outlined inline"
+                aria-hidden="true">celebration</span>&ensp;フォトスポット・オリジナルグッズ販売・くじなど<br />
+              <span class="material-symbols-outlined inline" aria-hidden="true">description</span>&ensp;<a
+                href="https://machikanesai.com/26/search/111/" target="_blank" rel="noopener noreferrer">まちかね祭企画ページ<span
+                  class="material-symbols-outlined open_in_new" aria-hidden="true">open_in_new</span></a>
+            </p>
 
-    <section class="news">
-      <div class="news_head">
-        <span class="head_title">NEWS</span>
-        <span class="head_caption">最新情報</span>
-      </div>
-
-      <div class="news_list text">
-        <table class="news_table">
-          <!--
-          <tr>
-            <td class="date">
-              <div class="date_year">2024</div>
-              <div class="date_day">9.15</div>
-            </td>
-            <td>
-              <span class="title_new">NEW</span>
-              <div class="title">9月会合を行いました。</div>
-            </td>
-          </tr>
-          -->
-
-          <tr>
-            <td class="date">
-              <div class="date_year">2025</div>
-              <div class="date_day">2.22</div>
-            </td>
-            <td>
-              <div class="title">
-                <span class="title_new">NEW</span>
-                <a href="https://x.com/OU_ojousamaclub/status/1893269319896678705" target="_blank">
-                  2月会合を行いましたわ！
-                  今回はGeoGuessrというストリートビューを使った地理ゲームをしましたの🌍またバレンタインということで、手持ちのカードを使って「愛のメッセージ」を組み立てるゲームもしましたわ💞どちらもとっても楽しかったですわ〜！
-                </a>
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <td class="date">
-              <div class="date_year">2025</div>
-              <div class="date_day">1.23</div>
-            </td>
-            <td>
-              <div class="title">
-                <span class="title_new">NEW</span>
-                <a href="https://x.com/OU_ojousamaclub/status/1882383115345416232" target="_blank">
-                  1月会合を行いましたの！
-                  今回は新年1回目の会合でしたわ🎍なのでお正月らしく書き初めや俳句などをして遊びましたの🥰
-                  今年1年も、皆様にとって良い年となるようお祈りしていますわ💞
-                </a>
-              </div>
-            </td>
-          </tr>
-
-
-          <tr>
-            <td class="date">
-              <div class="date_year">2024</div>
-              <div class="date_day">12.29</div>
-            </td>
-            <td>
-              <div class="title">
-                <!-- <span class="title_new">NEW</span> -->
-                <a href="https://x.com/OU_ojousamaclub/status/1873341131314098336" target="_blank">
-                  12月会合を行いましたわ！
-                  年末らしく和室で大富豪などのトランプを使ったゲームをして盛り上がりましたの</a>
-              </div>
-            </td>
-          </tr>
-
-
-          <tr>
-            <td class="date">
-              <div class="date_year">2024</div>
-              <div class="date_day">12.01</div>
-            </td>
-            <td>
-              <div class="title">12月8日に石橋商店街で行われるおはこ文化祭にてお茶会を開催しますわ！あま〜いワッフルやこだわりのお紅茶、まちかね祭で販売したグッズがございますの！</br>
-                <span class="material-symbols-outlined inline">map</span>&ensp;石橋商店街</br>
-                <span class="material-symbols-outlined inline">location_on</span>&ensp;石橋商店街サンロード西口（アーケード）</br>
-                <span class="material-symbols-outlined inline">schedule</span>&ensp;11:00~14:00</br>
-                <span class="material-symbols-outlined inline">description</span>&ensp;<a
-                  href="https://x.com/OU_ojousamaclub/status/1865555721091518692" target="_blank">メニューはこちら<span
-                    class="material-symbols-outlined open_in_new">open_in_new</span></a>
-              </div>
-            </td>
-          </tr>
-
-          <!-- <tr>
-            <td class="date">
-              <div class="date_year">2024</div>
-              <div class="date_day">12.01</div>
-            </td>
-            <td>
-              <div class="title">
-                <a href="https://x.com/OU_ojousamaclub/status/1863176982953128412" target="_blank">11月会合を行いましたわ！
-                  今回はなんとちょうど1ヶ月遅れのハロウィンパーティーをしましたの🎃</a>
-              </div>
-            </td>
-          </tr> -->
-          <!--
-          <tr>
-            <td class="date">
-              <div class="date_year">2024</div>
-              <div class="date_day">10.1</div>
-            </td>
-            <td>
-              <div class="title">11月2日～4日に大阪大学豊中キャンパスで行われる まちかね祭
-                に出展いたしますわ！</br>
-                <span class="material-symbols-outlined inline">map</span>&ensp;大阪大学豊中キャンパス</br>
-                <span class="material-symbols-outlined inline">location_on</span>&ensp;法経講義棟2階 4番教室</br>
-                <span class="material-symbols-outlined inline">schedule</span>&ensp;11:00~18:00(最終日 ~17:30)</br>
-                <span class="material-symbols-outlined inline">description</span>&ensp;<a
-                  href="https://machikanesai.com/24/search/115/" target="_blank">まちかね祭企画ページ<span
-                    class="material-symbols-outlined open_in_new">open_in_new</span></a>
-
-
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td class="date">
-              <div class="date_year">2024</div>
-              <div class="date_day">10.29</div>
-            </td>
-            <td>
-              <div class="title">
-                <a href="https://x.com/OU_ojousamaclub/status/1851182590876926242" target="_blank">第２回10月会合を行いましたわ！
-                  まちかね祭が近づいてきましたわね🎶フォトスポットやグッズなどの準備が着々と進んでおりますの！</a>
-              </div>
-            </td>
-          </tr>
-
-
-          <tr>
-            <td class="date">
-              <div class="date_year">2024</div>
-              <div class="date_day">10.24</div>
-            </td>
-            <td>
-              <div class="title">
-
-                <a href="https://x.com/OU_ojousamaclub/status/1849405584342495621" target="_blank">第１回10月会合を行いました！
-                  いよいよまちかね祭に向けた動きが本格化してきましたわ✨</a>
-              </div>
-            </td>
-          </tr>
-
-          
-          <tr>
-            <td class="date">
-              <div class="date_year">2024</div>
-              <div class="date_day">9.27</div>
-            </td>
-            <td>
-              <div class="title"><a href="https://x.com/OU_ojousamaclub/status/1839674573140402190"
-                  target="_blank">夏合宿に行きましたわ〜🌻🤍1日目は須磨離宮公園と須磨シーワールド、2日目は北野異人館と神戸ポートタワーに行きましたわ！神戸の海を一望できるクルーズにも乗船しましたの🚢
-                </a></div>
-            </td>
-          </tr>
-
-          <td class="date">
-            <div class="date_year">2024</div>
-            <div class="date_day">9.21</div>
-          </td>
-          <td>
-            <div class="title_wrap">
-              <div class="title"> <a href="https://x.com/OU_ojousamaclub/status/1837489351661338653"
-                  target="_blank">9月会合を行いましたの✨今回も引き続きまちかね祭に向けた話し合いを行いましたわ！だんだん具体的になってきましたわよ🤭
-                </a>
-              </div>
-            </div>
-
-          </td>
-
-
-          <tr>
-            <td class="date">
-              <div class="date_year">2024</div>
-              <div class="date_day">8.28</div>
-            </td>
-            <td>
-              <div class="title"> <a href="https://x.com/OU_ojousamaclub/status/1828749731587387732"
-                  target="_blank">8月会合を行いましたわ🌹今回はまちかね祭のグッズについて話しましたの！皆様楽しみにしておいてくださいね😊
-                </a>
-              </div>
-            </td>
-          </tr>
-          -->
-          <!--
-            <tr>
-              <td class="date"><div class = "date_year">2024</div><div class="date_day">10.10</div></td>
-              <td><div class="title">なんか書くなんか書くなんか書くなんか書くなんか書くなんか書くなんか書く</div></td>
-            </tr>
-            -->
-
-
-
-
-        </table>
-
-
-
-
-      </div>
-      <!--
-      <div class="linkButton">
-        <a href="https://x.com/OU_ojousamaclub/" class="text linkButton_text">More</a>
-      </div>
-      -->
-
+          </div>
+        </li><img class="activities-poster" src="imgs/2026machikane.jpg" width="1448" height="2048"
+          alt="まちかね祭『お菓子とぜんまい仕掛けのお茶会』の案内ポスター" loading="lazy" decoding="async" />
+      </ol>
+      <p class="text">これまでの会合やイベントの様子をご覧いただけますわ。</p>
+      <a class="btn" href="activities/index.html">過去の活動記録を見る</a>
     </section>
 
     <!--
@@ -307,7 +140,7 @@
       <div class="text">
         お問い合わせは ouojousamaclub@gmail.com もしくは <a href="https://x.com/OU_ojousamaclub/" class="text"
           target="_blank">Twitter</a>
-        にてお伺いいたしますわ。
+        にてお伺いいたします。
       </div>
     </section>
     <br />
@@ -397,7 +230,7 @@
       </div>
 
       <div class="copyright">
-        <p>© 2024 大阪大学お嬢様部</p>
+        <p>© 2024-2026 大阪大学お嬢様部</p>
       </div>
     </div>
   </footer>
